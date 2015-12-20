@@ -1,0 +1,970 @@
+{
+  "objectType" : "Graph",
+  "metadata" : {
+    "uiGraphZoom" : "{\n  \"value\" : 0.8835999965667725\n  }",
+    "uiGraphPan" : "{\n  \"x\" : -57.60919952392578,\n  \"y\" : -23.85799789428711\n  }"
+    },
+  "title" : "arm",
+  "ports" : [
+    {
+      "objectType" : "Port",
+      "nodePortType" : "IO",
+      "name" : "solver",
+      "execPortType" : "IO"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "drawDebug",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "rigScale",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "rightSide",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "ikblend",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "softIK",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "softDist",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "stretch",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "stretchBlend",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "root",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "bone0FK",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "bone1FK",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "ikHandle",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "upV",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "bone0Len",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "bone1Len",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "bone0Out",
+      "execPortType" : "Out"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "bone1Out",
+      "execPortType" : "Out"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "bone2Out",
+      "execPortType" : "Out"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "Out",
+      "name" : "hand",
+      "execPortType" : "In"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "bicepRollOut",
+      "execPortType" : "Out"
+      },
+    {
+      "objectType" : "Port",
+      "nodePortType" : "In",
+      "name" : "forearmRollOut",
+      "execPortType" : "Out"
+      }
+    ],
+  "extDeps" : {},
+  "nodes" : [
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":183.283,\"y\":50.5872}"
+        },
+      "name" : "armKLOp",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "IO",
+          "name" : "solver"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "drawDebug"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "rigScale"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "rightSide"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "ikblend"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "softIK"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "softDist"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "stretch"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "stretchBlend"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "root"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "bone0FK"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "bone1FK"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "ikHandle"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "upV"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "bone0Len"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "bone1Len"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "bone0Out"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "bone1Out"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "bone2Out"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Func",
+        "title" : "armKLOp",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "nodePortType" : "IO",
+            "name" : "solver",
+            "execPortType" : "IO",
+            "typeSpec" : "TwoBoneIKSolver"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "drawDebug",
+            "execPortType" : "In",
+            "typeSpec" : "Boolean"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "rigScale",
+            "execPortType" : "In",
+            "typeSpec" : "Scalar"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "rightSide",
+            "execPortType" : "In",
+            "typeSpec" : "Boolean"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "ikblend",
+            "execPortType" : "In",
+            "typeSpec" : "Scalar"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "softIK",
+            "execPortType" : "In",
+            "typeSpec" : "Boolean"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "softDist",
+            "execPortType" : "In",
+            "typeSpec" : "Scalar"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "stretch",
+            "execPortType" : "In",
+            "typeSpec" : "Boolean"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "stretchBlend",
+            "execPortType" : "In",
+            "typeSpec" : "Scalar"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "root",
+            "execPortType" : "In",
+            "typeSpec" : "Mat44"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "bone0FK",
+            "execPortType" : "In",
+            "typeSpec" : "Mat44"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "bone1FK",
+            "execPortType" : "In",
+            "typeSpec" : "Mat44"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "ikHandle",
+            "execPortType" : "In",
+            "typeSpec" : "Mat44"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "upV",
+            "execPortType" : "In",
+            "typeSpec" : "Mat44"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "bone0Len",
+            "execPortType" : "In",
+            "typeSpec" : "Scalar"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "bone1Len",
+            "execPortType" : "In",
+            "typeSpec" : "Scalar"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "bone0Out",
+            "execPortType" : "Out",
+            "typeSpec" : "Mat44"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "bone1Out",
+            "execPortType" : "Out",
+            "typeSpec" : "Mat44"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "bone2Out",
+            "execPortType" : "Out",
+            "typeSpec" : "Mat44"
+            }
+          ],
+        "extDeps" : {
+          "Kraken" : "*"
+          },
+        "code" : "dfgEntry {
+  if(solver == null)
+    solver = TwoBoneIKSolver();
+  solver.solve(
+    drawDebug,
+    rigScale,
+    rightSide,
+    ikblend,
+    softIK,
+    softDist,
+    stretch,
+    stretchBlend,
+    root,
+    bone0FK,
+    bone1FK,
+    ikHandle,
+    upV,
+    bone0Len,
+    bone1Len,
+    bone0Out,
+    bone1Out,
+    bone2Out
+  );
+}
+"
+        }
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":310.593,\"y\":688.633}"
+        },
+      "name" : "foreArmRoll_Division",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "defaultValues" : {
+            "SInt32" : 0
+            },
+          "name" : "mainAxis"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "refMatrix"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "inMatrix"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "defaultValues" : {
+            "Float32" : 0
+            },
+          "name" : "offset"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "defaultValues" : {
+            "SInt32" : 1
+            },
+          "name" : "subdivCount"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "outMatrix"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Graph",
+        "metadata" : {
+          "uiTextColor" : "{\n  \"r\" : 20,\n  \"g\" : 20,\n  \"b\" : 20\n  }",
+          "uiNodeColor" : "{\n  \"r\" : 121,\n  \"g\" : 134,\n  \"b\" : 143\n  }",
+          "uiGraphZoom" : "{\n  \"value\" : 1.737579584121704\n  }",
+          "uiGraphPan" : "{\n  \"x\" : -1684.366206049919,\n  \"y\" : 75.57261776924133\n  }"
+          },
+        "title" : "roll",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "metadata" : {
+              "uiCombo" : "(\"X\", \"Y\", \"Z\")"
+              },
+            "nodePortType" : "Out",
+            "name" : "mainAxis",
+            "execPortType" : "In",
+            "typeSpec" : "Integer"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "refMatrix",
+            "execPortType" : "In",
+            "typeSpec" : "Mat44"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "inMatrix",
+            "execPortType" : "In",
+            "typeSpec" : "Mat44"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "offset",
+            "execPortType" : "In",
+            "typeSpec" : "Float32"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "subdivCount",
+            "execPortType" : "In",
+            "typeSpec" : "Integer"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "outMatrix",
+            "execPortType" : "Out",
+            "typeSpec" : "Mat44[]"
+            }
+          ],
+        "extDeps" : {},
+        "nodes" : [
+          {
+            "objectType" : "Inst",
+            "metadata" : {
+              "uiGraphPos" : "{\"x\":1069.0,\"y\":16.0975}"
+              },
+            "name" : "roll",
+            "ports" : [
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "mainAxis"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "refMatrix"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "inMatrix"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "IO",
+                "name" : "outMatrix"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "offset"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "subdivCount"
+                }
+              ],
+            "definition" : {
+              "objectType" : "Func",
+              "title" : "roll",
+              "ports" : [
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "mainAxis",
+                  "execPortType" : "In",
+                  "typeSpec" : "Integer"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "refMatrix",
+                  "execPortType" : "In",
+                  "typeSpec" : "Mat44"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "inMatrix",
+                  "execPortType" : "In",
+                  "typeSpec" : "Mat44"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "IO",
+                  "name" : "outMatrix",
+                  "execPortType" : "IO",
+                  "typeSpec" : "Mat44[]"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "offset",
+                  "execPortType" : "In",
+                  "typeSpec" : "Float32"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "subdivCount",
+                  "execPortType" : "In",
+                  "typeSpec" : "Integer"
+                  }
+                ],
+              "extDeps" : {
+                "rig_Solvers" : "*"
+                },
+              "code" : "
+
+dfgEntry {
+  outMatrix.resize(subdivCount);
+  RollDivision roll = RollDivision(offset, mainAxis, refMatrix, inMatrix, outMatrix);
+  roll.solve();
+  outMatrix = roll.outMatrix;
+  
+}
+"
+              }
+            }
+          ],
+        "connections" : {
+          "mainAxis" : [
+            "roll.mainAxis"
+            ],
+          "refMatrix" : [
+            "roll.refMatrix"
+            ],
+          "inMatrix" : [
+            "roll.inMatrix"
+            ],
+          "offset" : [
+            "roll.offset"
+            ],
+          "subdivCount" : [
+            "roll.subdivCount"
+            ],
+          "roll.outMatrix" : [
+            "outMatrix"
+            ]
+          }
+        }
+      },
+    {
+      "objectType" : "Inst",
+      "metadata" : {
+        "uiGraphPos" : "{\"x\":288.572,\"y\":494.53}"
+        },
+      "name" : "bicepRoll_Division",
+      "ports" : [
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "defaultValues" : {
+            "SInt32" : 0
+            },
+          "name" : "mainAxis"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "refMatrix"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "name" : "inMatrix"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "defaultValues" : {
+            "Float32" : 0
+            },
+          "name" : "offset"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "In",
+          "defaultValues" : {
+            "SInt32" : 1
+            },
+          "name" : "subdivCount"
+          },
+        {
+          "objectType" : "InstPort",
+          "nodePortType" : "Out",
+          "name" : "outMatrix"
+          }
+        ],
+      "definition" : {
+        "objectType" : "Graph",
+        "metadata" : {
+          "uiTextColor" : "{\n  \"r\" : 20,\n  \"g\" : 20,\n  \"b\" : 20\n  }",
+          "uiNodeColor" : "{\n  \"r\" : 121,\n  \"g\" : 134,\n  \"b\" : 143\n  }",
+          "uiGraphZoom" : "{\n  \"value\" : 1.737579584121704\n  }",
+          "uiGraphPan" : "{\n  \"x\" : -1684.366206049919,\n  \"y\" : 75.57261776924133\n  }"
+          },
+        "title" : "roll",
+        "ports" : [
+          {
+            "objectType" : "Port",
+            "metadata" : {
+              "uiCombo" : "(\"X\", \"Y\", \"Z\")"
+              },
+            "nodePortType" : "Out",
+            "name" : "mainAxis",
+            "execPortType" : "In",
+            "typeSpec" : "Integer"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "refMatrix",
+            "execPortType" : "In",
+            "typeSpec" : "Mat44"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "inMatrix",
+            "execPortType" : "In",
+            "typeSpec" : "Mat44"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "offset",
+            "execPortType" : "In",
+            "typeSpec" : "Float32"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "Out",
+            "name" : "subdivCount",
+            "execPortType" : "In",
+            "typeSpec" : "Integer"
+            },
+          {
+            "objectType" : "Port",
+            "nodePortType" : "In",
+            "name" : "outMatrix",
+            "execPortType" : "Out",
+            "typeSpec" : "Mat44[]"
+            }
+          ],
+        "extDeps" : {},
+        "nodes" : [
+          {
+            "objectType" : "Inst",
+            "metadata" : {
+              "uiGraphPos" : "{\"x\":1069.0,\"y\":16.0975}"
+              },
+            "name" : "roll",
+            "ports" : [
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "mainAxis"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "refMatrix"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "inMatrix"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "IO",
+                "name" : "outMatrix"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "offset"
+                },
+              {
+                "objectType" : "InstPort",
+                "nodePortType" : "In",
+                "name" : "subdivCount"
+                }
+              ],
+            "definition" : {
+              "objectType" : "Func",
+              "title" : "roll",
+              "ports" : [
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "mainAxis",
+                  "execPortType" : "In",
+                  "typeSpec" : "Integer"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "refMatrix",
+                  "execPortType" : "In",
+                  "typeSpec" : "Mat44"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "inMatrix",
+                  "execPortType" : "In",
+                  "typeSpec" : "Mat44"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "IO",
+                  "name" : "outMatrix",
+                  "execPortType" : "IO",
+                  "typeSpec" : "Mat44[]"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "offset",
+                  "execPortType" : "In",
+                  "typeSpec" : "Float32"
+                  },
+                {
+                  "objectType" : "Port",
+                  "nodePortType" : "Out",
+                  "name" : "subdivCount",
+                  "execPortType" : "In",
+                  "typeSpec" : "Integer"
+                  }
+                ],
+              "extDeps" : {
+                "rig_Solvers" : "*"
+                },
+              "code" : "
+
+dfgEntry {
+  outMatrix.resize(subdivCount);
+  RollDivision roll = RollDivision(offset, mainAxis, refMatrix, inMatrix, outMatrix);
+  roll.solve();
+  outMatrix = roll.outMatrix;
+  
+}
+"
+              }
+            }
+          ],
+        "connections" : {
+          "mainAxis" : [
+            "roll.mainAxis"
+            ],
+          "refMatrix" : [
+            "roll.refMatrix"
+            ],
+          "inMatrix" : [
+            "roll.inMatrix"
+            ],
+          "offset" : [
+            "roll.offset"
+            ],
+          "subdivCount" : [
+            "roll.subdivCount"
+            ],
+          "roll.outMatrix" : [
+            "outMatrix"
+            ]
+          }
+        }
+      }
+    ],
+  "connections" : {
+    "solver" : [
+      "armKLOp.solver"
+      ],
+    "drawDebug" : [
+      "armKLOp.drawDebug"
+      ],
+    "rigScale" : [
+      "armKLOp.rigScale"
+      ],
+    "rightSide" : [
+      "armKLOp.rightSide"
+      ],
+    "ikblend" : [
+      "armKLOp.ikblend"
+      ],
+    "softIK" : [
+      "armKLOp.softIK"
+      ],
+    "softDist" : [
+      "armKLOp.softDist"
+      ],
+    "stretch" : [
+      "armKLOp.stretch"
+      ],
+    "stretchBlend" : [
+      "armKLOp.stretchBlend"
+      ],
+    "root" : [
+      "armKLOp.root",
+      "bicepRoll_Division.inMatrix"
+      ],
+    "bone0FK" : [
+      "armKLOp.bone0FK"
+      ],
+    "bone1FK" : [
+      "armKLOp.bone1FK"
+      ],
+    "ikHandle" : [
+      "armKLOp.ikHandle"
+      ],
+    "upV" : [
+      "armKLOp.upV"
+      ],
+    "bone0Len" : [
+      "armKLOp.bone0Len"
+      ],
+    "bone1Len" : [
+      "armKLOp.bone1Len"
+      ],
+    "hand" : [
+      "foreArmRoll_Division.inMatrix"
+      ],
+    "armKLOp.solver" : [
+      "solver"
+      ],
+    "armKLOp.bone0Out" : [
+      "bone0Out",
+      "bicepRoll_Division.refMatrix"
+      ],
+    "armKLOp.bone1Out" : [
+      "bone1Out"
+      ],
+    "armKLOp.bone2Out" : [
+      "bone2Out",
+      "foreArmRoll_Division.refMatrix"
+      ],
+    "foreArmRoll_Division.outMatrix" : [
+      "bicepRollOut"
+      ],
+    "bicepRoll_Division.outMatrix" : [
+      "forearmRollOut"
+      ]
+    },
+  "args" : [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+    ]
+  }
